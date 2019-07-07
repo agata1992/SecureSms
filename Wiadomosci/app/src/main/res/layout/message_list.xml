@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#d1e2fc"
+    android:weightSum="1">
+    <LinearLayout android:id="@+id/linearLayout1"
+        android:layout_width="match_parent" android:layout_weight="0"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:background="#a8acf7">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:id="@+id/Number"
+                android:layout_gravity="center"
+                android:textSize="20sp" />
+        </FrameLayout>
+    </LinearLayout>
+    <ListView android:layout_width="match_parent"
+        android:layout_height="222dp"
+        android:id="@+id/List2"
+        android:layout_weight="0.92">
+    </ListView>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp">
+
+        <EditText
+            android:layout_width="224dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/sms"
+            android:layout_gravity="left|center_vertical"
+            android:inputType="none" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wyślij"
+            android:id="@+id/button"
+            android:layout_gravity="right|top"
+            android:onClick="Send"/>
+    </FrameLayout>
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Szyfruj"
+        android:id="@+id/switch1"
+        android:layout_weight="0"
+        android:checked="false" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/key"
+        android:layout_weight="0"
+        android:visibility="invisible" />
+
+</LinearLayout>
